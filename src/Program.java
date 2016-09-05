@@ -324,6 +324,10 @@ public class Program extends Application {
             ratePlus.setDisable(true);
         }
 
+        if (rate > money) {
+            startButton.setDisable(true);
+        }
+
         if (money == 0 && choise == 0) {
             noMoneyLabel.setVisible(true);
             money += 50;
