@@ -77,6 +77,7 @@ public class Program extends Application {
 
         animationTimer.start();
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.setTitle("Racer Totalizator");
         primaryStage.getIcons().add(ico);
         primaryStage.show();
