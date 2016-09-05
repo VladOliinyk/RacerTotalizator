@@ -93,6 +93,7 @@ public class Program extends Application {
 
     private Parent createContent() {
         gameRoot.setPrefSize(windowWidth, windowHeight);
+        gameRoot.setMaxSize(windowWidth-10, windowHeight-10);
 
         ImageView bgImage = new ImageView();
         bgImage.setImage(background);
