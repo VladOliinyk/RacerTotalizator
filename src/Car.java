@@ -1,22 +1,44 @@
-
-
+/**
+ * Car thread class.
+ */
 public class Car extends Thread {
 
+    /**
+     * Boolean variable that contain thread 'car' status.
+     */
     private boolean isFinished = false;
+
+    /**
+     * Integer variable that contain thread 'car' distance from the start.
+     */
     private volatile int distance = 0;
 
+    /**
+     * Distance getter.
+     * @return distance - thread 'car' distance from the start.
+     */
     public int getDistance() {
         return distance;
     }
 
+    /**
+     * Method which sets isFinished variable to true.
+     */
     public void finish() {
         isFinished = true;
     }
 
+    /**
+     * Thread status checker.
+     * @return isFinished - boolean variable that contain thread 'car' status.
+     */
     public boolean isFinish() {
         return isFinished;
     }
 
+    /**
+     * Overrided method which increases 'car' distance with some delay.
+     */
     @Override
     public void run() {
         do {
@@ -37,6 +59,4 @@ public class Car extends Thread {
         }
         while (true);
     }
-
-
 }
